@@ -1,14 +1,6 @@
 version: 2
 
 models:
-  - name: customers
-    description: one record per customer with fields from orders
-    columns:
-      - name: customer_id
-        description: primary key of model
-        tests:
-          - unique
-          - not_null
   - name: stg_customers
     description: This model cleans up customer data
     columns:
