@@ -1,4 +1,12 @@
-Welcome to your new dbt project!
+Ramzi's Personal Scratch Pad for dbt development and testing
+
+
+## Things to try
+- Dbt Testing
+- CI/CD pipeline using github
+- Macros writing to prod. 
+- Documentation 
+
 
 ### Using the starter project
 
