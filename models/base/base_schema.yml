@@ -2,9 +2,10 @@ version: 2
 
 models:
   - name: stg_customers
-    description: This model cleans up customer data
+    description: This model cleans up customer data from our jaffle shop app.
     columns:
       - name: customer_id
+        description: The Primary key for customers.
         description: This model cleans up customer data
         tests:
           - unique
@@ -17,7 +18,11 @@ models:
         tests:
           - unique
           - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
       - name: status
+        description: "{{ doc('order_status')}}"
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
